@@ -1,6 +1,5 @@
 package app.demo;
 
-
 // resources/data/data_clinical_patient.txt
 public class Patient {
 	private String patientId;
@@ -45,7 +44,7 @@ public class Patient {
 	}
 
 	public String getSmokingHistory() {
-		return this.patientId;
+		return this.smokingHistory;
 	}
 
 	public void setSmokingHistory(String smokingHistory) {
@@ -66,5 +65,10 @@ public class Patient {
 
 	public void setOsStatus(String osStatus) {
 		this.osStatus = osStatus;
+	}
+
+	public String toString() {
+		return this.patientId + "," + this.sex + "," + this.vitalStatus + "," + this.smokingHistory
+			+ "," + this.osMonths + "," + this.osStatus;
 	}
 }

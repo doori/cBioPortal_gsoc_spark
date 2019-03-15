@@ -33,7 +33,7 @@ public class PatientQuery {
     @Autowired
     private ParquetIO parquetIO;
 
-    public static final String DATA_FOLDER = "/Users/doori/Documents/projects/spark-app/demo/src/main/resources/data/";
+    public static final String DATA_FOLDER = "src/main/resources/data/";
     public static final String PATIENT_FILE = "data_clinical_patient.parquet";
 
     public List<Patient> getPatients() {

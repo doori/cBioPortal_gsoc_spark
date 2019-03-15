@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RequestMapping("api")
-@Controller
+@RestController
 public class ApiController {
 
     @Autowired
@@ -18,7 +18,7 @@ public class ApiController {
     @Autowired
     ParquetIO parquetIO;
 
-    public static final String DATA_FOLDER = "resources/data/";
+    public static final String DATA_FOLDER = "src/main/resources/data/";
 
     // TODO try with yarn
 
