@@ -34,6 +34,6 @@ GET methods:
 
 ## Notes
 
-This project is a proof of concept. It currently runs Spark on your local clusters. Please see application.properties for spark configuration details.
+This project is a proof of concept. It currently runs Spark on your local clusters. Please see application.properties for spark configuration details.  
 
 Demo includes querying patient(s) data from *data_clinical_patient.parquet*.
