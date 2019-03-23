@@ -27,12 +27,16 @@ public class AppConfiguration {
     @Value("${master.uri}")
     private String masterUri;
 
+    @Value("${spark.driver.bindAddress}")
+    private String bindAddress;
+
     @Bean
     public SparkConf sparkConf() {
         SparkConf sparkConf = new SparkConf()
                 .setAppName(appName)
                 .setSparkHome(sparkHome)
-                .setMaster(masterUri);
+                .setMaster(masterUri)
+                .set("spark.driver.bindAddress", bindAddress);
                 // yarn master
                 //.set("spark.yarn.jars", "hdfs://localhost:9000/user/doori/sparkJars")
                 //.set("spark.yarn.archive", "hdfs://localhost:9000/user/doori/spark-libs.jar");

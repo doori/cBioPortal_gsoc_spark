@@ -1,5 +1,5 @@
 function getPatient() {
-	var id = document.getElementById("patientId").value.trim();
+	var id = encodeURIComponent(document.getElementById("patientId").value.trim());
 	var tablels = document.getElementById("content");
 
 	fetch('http://localhost:8080/api/patients/'+id)
@@ -8,8 +8,6 @@ function getPatient() {
 	    return response.json();
 	  })
 	  .then(function(res) {
-	    console.log(res);
-
 	    // clean table
 	    while (tablels.firstChild) {
 		    tablels.removeChild(tablels.firstChild);
